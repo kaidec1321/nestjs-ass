@@ -22,16 +22,16 @@ export class UserService {
         return user;
     }
 
-    async read(id: string): Promise<User> {
+    async read(id: number): Promise<User> {
         return await this.userRepository.findOne(id);
     }
 
-    async update(id: string, data: Partial<UserDTO>): Promise<User> {
+    async update(id: number, data: Partial<UserDTO>): Promise<User> {
         await this.userRepository.update(id, data);
         return this.userRepository.findOne(id);
     }
 
-    async delete(id: string): Promise<boolean> {
+    async delete(id: number): Promise<boolean> {
         await this.userRepository.delete(id);
         return true;
     }
