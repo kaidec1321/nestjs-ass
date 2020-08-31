@@ -14,6 +14,4 @@ export class UserEntity {
 
     @CreateDateColumn()
     created_on: Date;
-
-
 }
